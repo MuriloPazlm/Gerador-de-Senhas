@@ -18,5 +18,8 @@ while v1 not in "SsNn":
 if v1 in "Ss":
     print('Que ótimo!')
     v2 = int(input('Quantos caracteres de 1 a 10 deseja? '))
+    if v2 < 1 or v2 > 10:
+        print('Por favor, apenas numeros entre 1 e 10!')
+        v2 = int(input('Quantos caracteres de 1 a 10 deseja? '))
     print('Aqui está sua senha gerada:')
     print(f"".join(map(str, senha[0:v2])))
